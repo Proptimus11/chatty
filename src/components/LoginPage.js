@@ -5,7 +5,6 @@ const Login = (props) => {
   const clickHandler = () => {
     props.setRegistration(!props.registration);
     props.setLogin(!props.setLogin);
-    console.log(props.registration);
   };
   return (
     <div className="container">

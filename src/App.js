@@ -10,6 +10,7 @@ function App() {
   // };
   const [login, setLogin] = useState(true);
   const [registration, setRegistration] = useState(false);
+  const [connect, setConnect] = useState(false);
   const FirstPage = (props) => {
     if (props.login) {
       return (
@@ -20,13 +21,22 @@ function App() {
           setRegistration={setRegistration}
         />
       );
+    } else if (props.registration) {
+      return (
+        <RegistrationPage
+          registration={registration}
+          setRegistration={setRegistration}
+          connect={connect}
+          setConnect={setConnect}
+        />
+      );
     }
-    return <RegistrationPage />;
+    return <Connect />;
   };
   return (
     <div className="App">
-      {/* <FirstPage login={login} /> */}
-      <Connect />
+      <FirstPage login={login} registration={registration} connect={connect} />
+      {/* <Connect /> */}
     </div>
   );
 }
