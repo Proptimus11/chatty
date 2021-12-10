@@ -1,6 +1,21 @@
 import React from "react";
+import axios from "axios";
 
-const Connect = () => {
+const Connect = (props) => {
+  const connectHandler = async () => {
+    try {
+      const Url = `https://3861-2405-201-5c06-e143-5bd-3117-51c3-41fb.ngrok.io/earth/install/${props.botid}`;
+      const config = {
+        method: "GET",
+        url: Url,
+      };
+      console.log(config);
+      const response = await axios(config);
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className="section">
       <div className="top-text">Connect your Facebook Massenger here</div>
@@ -20,7 +35,9 @@ const Connect = () => {
           </div>
         </div>
 
-        <button>Login with <span>FaceBook</span></button>
+        <button type="submit" onClick={connectHandler}>
+          Connect with <span>FaceBook</span>
+        </button>
         <div className="pages">
           <div className="page">
             <div className="image"></div>

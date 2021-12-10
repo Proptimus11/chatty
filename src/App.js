@@ -3,6 +3,7 @@ import Login from "./components/LoginPage";
 import "./styles/app.scss";
 import RegistrationPage from "./components/RegistrationPage";
 import Connect from "./components/ConnectPage";
+import BotFlow from "./components/BotFlow";
 
 function App() {
   // const clickHandler = () => {
@@ -11,6 +12,8 @@ function App() {
   const [login, setLogin] = useState(true);
   const [registration, setRegistration] = useState(false);
   const [connect, setConnect] = useState(false);
+  const [botid, setBotId] = useState("");
+  const [state, setState] = useState("login");
   const FirstPage = (props) => {
     if (props.login) {
       return (
@@ -19,6 +22,10 @@ function App() {
           setLogin={setLogin}
           registration={registration}
           setRegistration={setRegistration}
+          botid={botid}
+          setBotId={setBotId}
+          state={state}
+          setState={setState}
         />
       );
     } else if (props.registration) {
@@ -28,14 +35,19 @@ function App() {
           setRegistration={setRegistration}
           connect={connect}
           setConnect={setConnect}
+          botid={botid}
+          setBotId={setBotId}
+          state={state}
+          setState={setState}
         />
       );
     }
-    return <Connect />;
+    return <Connect botid={botid} setBotId={setBotId} />;
   };
   return (
     <div className="App">
       <FirstPage login={login} registration={registration} connect={connect} />
+      {/* <BotFlow /> */}
       {/* <Connect /> */}
     </div>
   );

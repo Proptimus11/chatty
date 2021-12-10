@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 
 .login-card {
-  height: 394px;
+  height: 420px;
   width: 328px;
   display: flex;
   flex-direction: column;
@@ -60,7 +60,7 @@
 }
 
 .header {
-  margin-top: 20px;
+ 
   padding-bottom: 5px;
   font-size: 45px;
   font-weight: 300;
@@ -72,7 +72,8 @@
     background-color: rgb(51, 50, 50);
     color: white;
     margin-top: 10px;
-    padding: 7px 50px;
+    margin-bottom: 100px;
+    padding: 10px 50px;
     &:hover {
       background-color: rgb(65, 142, 194);
       cursor: pointer;

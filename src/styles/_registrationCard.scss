@@ -1,5 +1,5 @@
 .registration-card {
-  height: 450px;
+  height: 470px;
   width: 600px;
   display: flex;
   flex-direction: column;
@@ -83,13 +83,16 @@
 }
 
 .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .cya-btn {
     border-radius: 10px;
     border: none;
-    background-color: rgb(230, 228, 228);
-    color: rgb(73, 73, 73);
+
+    color: rgb(240, 240, 240);
     font-size: 16px;
-    margin-top: 30px;
+    margin-top: 10px;
     padding: 10px 55px;
     &:hover {
       background-color: rgb(65, 142, 194);
